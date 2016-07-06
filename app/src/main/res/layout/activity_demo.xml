@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="employee"
             type="com.github.markzhai.databindingsample.Employee"/>
 
         <variable
-            name="watcher"
-            type="android.databinding.adapters.TextViewBindingAdapter.OnTextChanged"/>
+            name="presenter"
+            type="com.github.markzhai.databindingsample.DemoActivity.Presenter"/>
     </data>
 
     <LinearLayout
@@ -22,8 +23,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onTextChanged="@{watcher.onTextChanged}"
-            android:hint="输入 First Name"/>
+            android:hint="输入 First Name"
+            android:onTextChanged="@{presenter::onTextChanged}"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -33,13 +34,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{presenter.onClick}"
             android:text="@{employee.firstName}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{employee.lastName}"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginLeft="5dp"
+            android:onClick="@{() -> presenter.onClickListenerBinding(employee)}"
+            android:text="@{employee.lastName}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@{@dimen/activity_horizontal_margin + @dimen/activity_vertical_margin}"
+            android:onClick="@{() -> presenter.onClickListenerBinding(employee)}"
+            android:text="@{String.valueOf(1 + 2)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text='@{1 > 2 ? 5 : 3}'/>
 
     </LinearLayout>
 
