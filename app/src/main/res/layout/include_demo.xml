@@ -1,7 +1,6 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -20,12 +19,6 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         tools:context=".DemoActivity">
-
-        <ViewStub
-            android:id="@+id/view_stub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout="@layout/viewstub"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -50,15 +43,6 @@
             android:layout_marginLeft="5dp"
             android:onClick="@{() -> presenter.onClickListenerBinding(employee)}"
             android:text="@{employee.lastName}"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:onClick="@{() -> presenter.onClickListenerBinding(employee)}"
-            android:text="@{String.valueOf(1 + 2)}"/>
-
-        <include layout="@layout/include_demo" bind:employee="@{employee}"/>
 
     </LinearLayout>
 
