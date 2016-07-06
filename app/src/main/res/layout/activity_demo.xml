@@ -1,0 +1,46 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.github.markzhai.databindingsample.Employee"/>
+
+        <variable
+            name="watcher"
+            type="android.databinding.adapters.TextViewBindingAdapter.OnTextChanged"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".DemoActivity">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onTextChanged="@{watcher.onTextChanged}"
+            android:hint="输入 First Name"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入 Last Name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{employee.firstName}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{employee.lastName}"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+</layout>
