@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DemoActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,6 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SimpleDemoActivity"
+            android:label="@string/demo_simple"/>
+        <activity
+            android:name=".TwoWayDemoActivity"
+            android:label="@string/demo_inverse"/>
+        <activity
+            android:name=".ListDemoActivity"
+            android:label="@string/demo_list"/>
+        <activity
+            android:name=".ExpressionDemoActivity"
+            android:label="@string/demo_expression"/>
     </application>
 
 </manifest>
