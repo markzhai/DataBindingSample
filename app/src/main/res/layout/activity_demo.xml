@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.view.View"/>
+
         <variable
             name="employee"
             type="com.github.markzhai.databindingsample.Employee"/>
@@ -55,8 +57,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:visibility="@{employee.isFired ? View.GONE : View.VISIBLE}"
             android:onClick="@{() -> presenter.onClickListenerBinding(employee)}"
             android:text="@{String.valueOf(1 + 2)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text='@{employee.user["hello"]}'/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text='@{employee.user["hi"]}'/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text='@{employee.user["yo"]}'/>
 
         <include layout="@layout/include_demo" bind:employee="@{employee}"/>
 

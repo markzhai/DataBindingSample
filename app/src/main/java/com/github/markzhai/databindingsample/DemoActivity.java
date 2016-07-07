@@ -26,7 +26,8 @@ public class DemoActivity extends AppCompatActivity {
     public class Presenter {
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             employee.setFirstName(s.toString());
-            binding.setEmployee(employee);
+            employee.setFired(!employee.isFired.get());
+//            binding.setEmployee(employee);
         }
 
         public void onClick(View view) {
