@@ -37,6 +37,12 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:onClick="@{presenter.onClickAnimationDemo}"
+            android:text="@string/demo_lambda"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:onClick="@{presenter.onClickExpressionDemo}"
             android:text="@string/demo_expression"/>
 

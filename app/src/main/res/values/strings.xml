@@ -18,5 +18,9 @@
     <string name="demo_list">List</string>
     <string name="demo_inverse">Two-way binding</string>
     <string name="demo_expression">Expression</string>
+
     <string name="demo_animation">Animation</string>
+    <string name="show_image">Show image</string>
+
+    <string name="demo_lambda">Lambda</string>
 </resources>

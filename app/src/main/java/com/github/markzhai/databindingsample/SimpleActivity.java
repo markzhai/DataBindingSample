@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.github.markzhai.databindingsample.databinding.ActivityDemoBinding;
 
-public class SimpleDemoActivity extends AppCompatActivity {
+public class SimpleActivity extends AppCompatActivity {
 
     Employee employee = new Employee("Zhai", "Mark");
 
@@ -31,11 +31,11 @@ public class SimpleDemoActivity extends AppCompatActivity {
         }
 
         public void onClick(View view) {
-            Toast.makeText(SimpleDemoActivity.this, "点到了", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SimpleActivity.this, "点到了", Toast.LENGTH_SHORT).show();
         }
 
         public void onClickListenerBinding(Employee employee) {
-            Toast.makeText(SimpleDemoActivity.this, employee.getLastName(),
+            Toast.makeText(SimpleActivity.this, employee.getLastName(),
                     Toast.LENGTH_SHORT).show();
         }
     }

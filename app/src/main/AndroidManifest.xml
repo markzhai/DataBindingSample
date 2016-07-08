@@ -23,17 +23,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SimpleDemoActivity"
+            android:name=".SimpleActivity"
             android:label="@string/demo_simple"/>
         <activity
-            android:name=".TwoWayDemoActivity"
+            android:name=".TwoWayActivity"
             android:label="@string/demo_inverse"/>
         <activity
-            android:name=".ListDemoActivity"
+            android:name=".ListActivity"
             android:label="@string/demo_list"/>
         <activity
-            android:name=".ExpressionDemoActivity"
+            android:name=".ExpressionActivity"
             android:label="@string/demo_expression"/>
+        <activity
+            android:name=".AnimationActivity"
+            android:label="@string/demo_animation"/>
+        <activity
+            android:name=".LambdaActivity"
+            android:label="@string/demo_lambda"/>
     </application>
-
 </manifest>

@@ -17,19 +17,22 @@ public class MainActivity extends AppCompatActivity {
 
     public class Presenter {
         public void onClickSimpleDemo(View view) {
-            startActivity(new Intent(MainActivity.this, SimpleDemoActivity.class));
+            startActivity(new Intent(MainActivity.this, SimpleActivity.class));
         }
         public void onClickListDemo(View view) {
-            startActivity(new Intent(MainActivity.this, ListDemoActivity.class));
+            startActivity(new Intent(MainActivity.this, ListActivity.class));
         }
         public void onClickTwoWayDemo(View view) {
-            startActivity(new Intent(MainActivity.this, TwoWayDemoActivity.class));
+            startActivity(new Intent(MainActivity.this, TwoWayActivity.class));
         }
         public void onClickExpressionDemo(View view) {
-            startActivity(new Intent(MainActivity.this, ExpressionDemoActivity.class));
+            startActivity(new Intent(MainActivity.this, ExpressionActivity.class));
         }
         public void onClickAnimationDemo(View view) {
-            startActivity(new Intent(MainActivity.this, AnimationDemoActivity.class));
+            startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+        }
+        public void onClickLambdaDemo(View view) {
+            startActivity(new Intent(MainActivity.this, LambdaActivity.class));
         }
     }
 

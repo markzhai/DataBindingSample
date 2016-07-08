@@ -13,7 +13,7 @@
 
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.SimpleDemoActivity.Presenter"/>
+            type="com.github.markzhai.databindingsample.SimpleActivity.Presenter"/>
     </data>
 
     <LinearLayout
@@ -21,7 +21,7 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".SimpleDemoActivity">
+        tools:context=".SimpleActivity">
 
         <ViewStub
             android:id="@+id/view_stub"
