@@ -16,7 +16,10 @@
 
     <string name="demo_simple">Simple</string>
     <string name="demo_list">List</string>
+
     <string name="demo_inverse">Two-way binding</string>
+    <string name="welcome">Hello %s</string>
+
     <string name="demo_expression">Expression</string>
 
     <string name="demo_animation">Animation</string>

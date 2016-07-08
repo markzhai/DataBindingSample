@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.github.markzhai.databindingsample.Validator"/>
+
+        <variable
+            name="presenter"
+            type="com.github.markzhai.databindingsample.TwoWayActivity.Presenter"/>
+
+        <variable
+            name="model"
+            type="com.github.markzhai.databindingsample.FormModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={model.name}"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={model.password}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/welcome(model.name)}"
+            android:onClick="@{() -> presenter.save(model)}"
+            android:enabled="@{Validator.isValid(model)}"/>
+
+    </LinearLayout>
+</layout>
