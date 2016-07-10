@@ -9,11 +9,11 @@
 
         <variable
             name="employee"
-            type="com.github.markzhai.databindingsample.Employee"/>
+            type="com.github.markzhai.sample.Employee"/>
 
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.SimpleActivity.Presenter"/>
+            type="com.github.markzhai.sample.SimpleActivity.Presenter"/>
     </data>
 
     <LinearLayout

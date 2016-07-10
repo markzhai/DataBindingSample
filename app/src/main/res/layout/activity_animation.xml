@@ -9,7 +9,7 @@
 
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.AnimationActivity.Presenter"/>
+            type="com.github.markzhai.sample.AnimationActivity.Presenter"/>
 
         <variable
             name="showImage"

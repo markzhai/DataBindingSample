@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.github.markzhai.databindingsample.databinding.ActivityMainBinding;
+import com.github.markzhai.sample.databinding.ActivityMainBinding;
 
 /**
  * @author markzhai on 16/7/7

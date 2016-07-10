@@ -4,40 +4,34 @@
 
     <data>
 
-        <import type="com.github.markzhai.databindingsample.Validator"/>
-
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.TwoWayActivity.Presenter"/>
+            type="com.github.markzhai.sample.LambdaActivity.Presenter"/>
 
         <variable
-            name="model"
-            type="com.github.markzhai.databindingsample.FormModel"/>
+            name="employee"
+            type="com.github.markzhai.sample.Employee"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:orientation="vertical">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@={model.name}"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@={model.password}"/>
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{@string/welcome(model.name)}"
-            android:onClick="@{() -> presenter.save(model)}"
-            android:enabled="@{Validator.isValid(model)}"/>
+            android:onClick="@{() -> presenter.onEmployeeClick(employee)}"
+            android:text="@{employee.firstName}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> presenter.onEmployeeLongClick(employee, context)}"
+            android:onFocusChange="@{(v, fcs)->presenter.onFocusChange(employee)}"
+            android:text="@{employee.lastName}"/>
 
     </LinearLayout>
 </layout>

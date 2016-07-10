@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.support.v7.app.AppCompatActivity;
 

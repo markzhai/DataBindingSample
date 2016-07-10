@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.github.markzhai.databindingsample"
+        applicationId "com.github.markzhai.sample"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1

@@ -6,7 +6,7 @@
 
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.MainActivity.Presenter"/>
+            type="com.github.markzhai.sample.MainActivity.Presenter"/>
     </data>
 
     <LinearLayout
@@ -37,7 +37,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:onClick="@{presenter.onClickAnimationDemo}"
+            android:onClick="@{presenter.onClickLambdaDemo}"
             android:text="@string/demo_lambda"/>
 
         <Button

@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
@@ -37,7 +37,7 @@ public class Employee extends BaseObservable {
 
     public void setLastName(String lastName) {
         mLastName = lastName;
-        notifyPropertyChanged(com.github.markzhai.databindingsample.BR.lastName);
+        notifyPropertyChanged(com.github.markzhai.sample.BR.lastName);
     }
 
     @Bindable
@@ -47,7 +47,7 @@ public class Employee extends BaseObservable {
 
     public void setFirstName(String firstName) {
         mFirstName = firstName;
-        notifyPropertyChanged(com.github.markzhai.databindingsample.BR.firstName);
+        notifyPropertyChanged(com.github.markzhai.sample.BR.firstName);
     }
 
     public void setFired(boolean fired) {

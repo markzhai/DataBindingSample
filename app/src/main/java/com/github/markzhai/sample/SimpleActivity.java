@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.github.markzhai.databindingsample.databinding.ActivityDemoBinding;
+import com.github.markzhai.sample.databinding.ActivityDemoBinding;
 
 public class SimpleActivity extends AppCompatActivity {
 

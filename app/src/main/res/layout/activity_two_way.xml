@@ -4,15 +4,15 @@
 
     <data>
 
-        <import type="com.github.markzhai.databindingsample.Validator"/>
+        <import type="com.github.markzhai.sample.Validator"/>
 
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.TwoWayActivity.Presenter"/>
+            type="com.github.markzhai.sample.TwoWayActivity.Presenter"/>
 
         <variable
             name="model"
-            type="com.github.markzhai.databindingsample.FormModel"/>
+            type="com.github.markzhai.sample.FormModel"/>
     </data>
 
     <LinearLayout

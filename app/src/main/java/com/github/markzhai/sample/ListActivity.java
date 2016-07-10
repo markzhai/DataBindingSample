@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.OnRebindCallback;
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.github.markzhai.databindingsample.databinding.ActivityListBinding;
+import com.github.markzhai.sample.databinding.ActivityListBinding;
 
 import java.util.ArrayList;
 import java.util.List;

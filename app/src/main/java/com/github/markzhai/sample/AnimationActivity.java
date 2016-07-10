@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.OnRebindCallback;
@@ -10,7 +10,8 @@ import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.markzhai.databindingsample.databinding.ActivityAnimationBinding;
+import com.github.markzhai.sample.databinding.ActivityAnimationBinding;
+
 
 /**
  * @author markzhai on 16/7/7

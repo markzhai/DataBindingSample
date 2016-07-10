@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
@@ -24,7 +24,7 @@ public class FormModel extends BaseObservable {
 
     public void setName(String name) {
         mName = name;
-        notifyPropertyChanged(com.github.markzhai.databindingsample.BR.name);
+        notifyPropertyChanged(com.github.markzhai.sample.BR.name);
     }
 
     @Bindable
@@ -34,6 +34,6 @@ public class FormModel extends BaseObservable {
 
     public void setPassword(String password) {
         mPassword = password;
-        notifyPropertyChanged(com.github.markzhai.databindingsample.BR.password);
+        notifyPropertyChanged(com.github.markzhai.sample.BR.password);
     }
 }

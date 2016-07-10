@@ -1,4 +1,4 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -50,7 +50,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<BindingViewHolder> {
     @Override
     public void onBindViewHolder(BindingViewHolder holder, int position) {
         final Employee employee = mEmployeeList.get(position);
-        holder.getBinding().setVariable(com.github.markzhai.databindingsample.BR.employee, employee);
+        holder.getBinding().setVariable(com.github.markzhai.sample.BR.employee, employee);
         holder.getBinding().executePendingBindings();
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

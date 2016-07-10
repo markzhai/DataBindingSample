@@ -6,7 +6,7 @@
 
         <variable
             name="employee"
-            type="com.github.markzhai.databindingsample.Employee"/>
+            type="com.github.markzhai.sample.Employee"/>
     </data>
 
     <LinearLayout

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="presenter"
-            type="com.github.markzhai.databindingsample.ListActivity.Presenter"/>
+            type="com.github.markzhai.sample.ListActivity.Presenter"/>
     </data>
 
     <LinearLayout

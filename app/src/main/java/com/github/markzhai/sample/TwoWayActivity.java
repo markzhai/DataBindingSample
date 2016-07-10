@@ -1,11 +1,11 @@
-package com.github.markzhai.databindingsample;
+package com.github.markzhai.sample;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.github.markzhai.databindingsample.databinding.ActivityTwoWayBinding;
+import com.github.markzhai.sample.databinding.ActivityTwoWayBinding;
 
 /**
  * @author markzhai on 16/7/7
