@@ -17,6 +17,9 @@
     <string name="demo_simple">Simple</string>
     <string name="demo_list">List</string>
 
+    <string name="demo_list_add_item">Add item</string>
+    <string name="demo_list_remove_item">Remove item</string>
+
     <string name="demo_inverse">Two-way binding</string>
     <string name="welcome">Hello %s</string>
 

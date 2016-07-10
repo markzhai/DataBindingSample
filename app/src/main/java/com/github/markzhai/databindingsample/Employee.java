@@ -7,7 +7,7 @@ import android.databinding.ObservableBoolean;
 
 /**
  * @author markzhai on 16/6/26
- * @version 1.3.0
+ * @version 1.0.0
  */
 public class Employee extends BaseObservable {
 
@@ -22,9 +22,12 @@ public class Employee extends BaseObservable {
         mLastName = lastName;
         mFirstName = firstName;
         isFired.set(false);
-        user.put("hello", "world");
-        user.put("hi", "world");
-        user.put("yo", "world");
+    }
+
+    public Employee(String lastName, String firstName, boolean fired) {
+        mLastName = lastName;
+        mFirstName = firstName;
+        isFired.set(fired);
     }
 
     @Bindable

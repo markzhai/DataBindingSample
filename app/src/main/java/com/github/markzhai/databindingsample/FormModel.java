@@ -5,7 +5,7 @@ import android.databinding.Bindable;
 
 /**
  * @author markzhai on 16/7/8
- * @version 1.3.0
+ * @version 1.0.0
  */
 public class FormModel extends BaseObservable {
 

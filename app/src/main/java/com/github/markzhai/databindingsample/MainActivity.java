@@ -11,7 +11,7 @@ import com.github.markzhai.databindingsample.databinding.ActivityMainBinding;
 
 /**
  * @author markzhai on 16/7/7
- * @version 1.3.0
+ * @version 1.0.0
  */
 public class MainActivity extends AppCompatActivity {
 
