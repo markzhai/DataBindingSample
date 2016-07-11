@@ -29,4 +29,7 @@
     <string name="show_image">Show image</string>
 
     <string name="demo_lambda">Lambda</string>
+
+    <string name="fire">Fire</string>
+    <string name="employ">Employ</string>
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="presenter"
+            type="com.github.markzhai.sample.ExpressionActivity.Presenter"/>
+
+        <variable
+            name="employee"
+            type="com.github.markzhai.sample.Employee"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> presenter.onEmployeeClick(employee)}"
+            android:text="@{employee.firstName}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{employee.isFired ? @string/employ : @string/fire}"/>
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{employee.isFired ? View.VISIBLE : View.GONE}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{avatar.visibility}"/>
+
+        <CheckBox
+            android:id="@+id/seeAds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{avatar.visibility}"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{seeAds.checked ? View.GONE : View.VISIBLE}"/>
+
+    </LinearLayout>
+</layout>

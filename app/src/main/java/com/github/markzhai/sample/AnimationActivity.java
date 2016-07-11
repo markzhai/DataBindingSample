@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import com.github.markzhai.sample.databinding.ActivityAnimationBinding;
 
