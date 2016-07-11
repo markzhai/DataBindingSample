@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.github.markzhai.sample.databinding.ActivityExpressionBinding;
 
@@ -15,11 +14,11 @@ import com.github.markzhai.sample.databinding.ActivityExpressionBinding;
 public class ExpressionActivity extends AppCompatActivity {
 
     private ActivityExpressionBinding mBinding;
+    private Employee mEmployee = new Employee("Zhai", "Mark");
 
     public class Presenter {
         public void onEmployeeClick(Employee employee) {
-            Toast.makeText(ExpressionActivity.this, "onEmployeeClick",
-                    Toast.LENGTH_SHORT).show();
+            mEmployee.setFired(!mEmployee.isFired.get());
         }
     }
 
@@ -28,7 +27,8 @@ public class ExpressionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this,
                 R.layout.activity_expression);
-        mBinding.setEmployee(new Employee("Zhai", "Mark"));
+        mEmployee.setAvatar("https://avatars2.githubusercontent.com/u/1106500");
+        mBinding.setEmployee(mEmployee);
         mBinding.setPresenter(new Presenter());
     }
 }

@@ -30,6 +30,6 @@
 
     <string name="demo_lambda">Lambda</string>
 
-    <string name="fire">Fire</string>
-    <string name="employ">Employ</string>
+    <string name="fire">Fire %s</string>
+    <string name="employ">Employ %s</string>
 </resources>

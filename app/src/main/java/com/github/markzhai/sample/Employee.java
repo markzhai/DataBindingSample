@@ -16,6 +16,8 @@ public class Employee extends BaseObservable {
 
     public ObservableArrayMap<String, String> user = new ObservableArrayMap<>();
 
+    private String mAvatar;
+
     public ObservableBoolean isFired = new ObservableBoolean();
 
     public Employee(String lastName, String firstName) {
@@ -52,5 +54,14 @@ public class Employee extends BaseObservable {
 
     public void setFired(boolean fired) {
         isFired.set(fired);
+    }
+
+    @Bindable
+    public String getAvatar() {
+        return mAvatar;
+    }
+
+    public void setAvatar(String avatar) {
+        mAvatar = avatar;
     }
 }

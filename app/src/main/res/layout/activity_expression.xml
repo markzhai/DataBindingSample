@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -26,34 +27,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="@{() -> presenter.onEmployeeClick(employee)}"
-            android:text="@{employee.firstName}"/>
+            android:text="@{employee.isFired ? @string/employ(employee.firstName) : @string/fire(employee.firstName)}"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{employee.isFired ? @string/employ : @string/fire}"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            app:imageUri="@{employee.avatar}"
+            app:placeholder="@{@drawable/default_avatar}"/>
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="@{employee.isFired ? View.VISIBLE : View.GONE}"/>
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:visibility="@{employee.isFired ? View.VISIBLE : View.GONE}"
+            app:imageUri="@{employee.avatar}"
+            app:placeholder="@{@drawable/default_avatar}"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="dummy"
             android:visibility="@{avatar.visibility}"/>
 
         <CheckBox
-            android:id="@+id/seeAds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="dummy"
             android:visibility="@{avatar.visibility}"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="@{seeAds.checked ? View.GONE : View.VISIBLE}"/>
 
     </LinearLayout>
 </layout>
