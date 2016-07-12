@@ -30,6 +30,8 @@
 
     <string name="demo_lambda">Lambda</string>
 
+    <string name="demo_inject">Injection</string>
+
     <string name="fire">Fire %s</string>
     <string name="employ">Employ %s</string>
 </resources>

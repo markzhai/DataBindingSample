@@ -52,6 +52,12 @@
             android:onClick="@{presenter.onClickAnimationDemo}"
             android:text="@string/demo_animation"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{presenter.onClickInjectDemo}"
+            android:text="@string/demo_inject"/>
+
     </LinearLayout>
 
 </layout>

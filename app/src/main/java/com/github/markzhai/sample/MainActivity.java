@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         public void onClickLambdaDemo(View view) {
             startActivity(new Intent(MainActivity.this, LambdaActivity.class));
         }
+        public void onClickInjectDemo(View view) {
+//            startActivity(new Intent(MainActivity.this, LambdaActivity.class));
+        }
     }
 
     @Override
