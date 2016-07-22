@@ -8,53 +8,34 @@
         <import type="android.view.View"/>
 
         <variable
-            name="presenter"
-            type="com.github.markzhai.sample.ExpressionActivity.Presenter"/>
-
-        <variable
             name="employee"
             type="com.github.markzhai.sample.Employee"/>
     </data>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="@{() -> presenter.onEmployeeClick(employee)}"
-            android:text="@{employee.isFired ? @string/employ(employee.firstName) : @string/fire(employee.firstName)}"/>
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="50dp"
-            app:imageUri="@{employee.avatar}"
-            app:placeholder="@{@drawable/default_avatar}"/>
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:visibility="@{employee.isFired ? View.VISIBLE : View.GONE}"
-            app:imageUri="@{employee.avatar}"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="@{employee.isFired ? View.INVISIBLE : View.VISIBLE}"
+            app:imageUrl="@{employee.avatar}"
             app:placeholder="@{@drawable/default_avatar}"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="dummy"
+            android:text="@{employee.firstName}"
             android:visibility="@{avatar.visibility}"/>
 
-        <CheckBox
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="dummy"
+            android:text="@{employee.lastName}"
             android:visibility="@{avatar.visibility}"/>
 
     </LinearLayout>

@@ -1,15 +1,11 @@
 package com.github.markzhai.sample;
 
 import android.databinding.DataBindingUtil;
-import android.databinding.OnRebindCallback;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.transition.TransitionManager;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.github.markzhai.sample.databinding.ActivityListBinding;
@@ -23,16 +19,16 @@ import java.util.List;
  */
 public class ListActivity extends AppCompatActivity {
 
-    private ActivityListBinding mBinding;
-    private EmployeeAdapter mListAdapter;
+    ActivityListBinding mBinding;
+    EmployeeAdapter mEmployeeAdapter;
 
     public class Presenter {
-        public void addItem(View view) {
-            mListAdapter.addEmployee(new Employee("Zhai", "Mark2", false));
+        public void onClickAddItem(View view) {
+            mEmployeeAdapter.add(new Employee("haha", "1", false));
         }
 
-        public void removeItem(View view) {
-            mListAdapter.removeEmployee();
+        public void onClickRemoveItem(View view) {
+            mEmployeeAdapter.remove();
         }
     }
 
@@ -40,19 +36,13 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_list);
-        mBinding.addOnRebindCallback(new OnRebindCallback() {
-            @Override
-            public boolean onPreBind(ViewDataBinding binding) {
-                ViewGroup sceneRoot = (ViewGroup) binding.getRoot();
-                TransitionManager.beginDelayedTransition(sceneRoot);
-                return true;
-            }
-        });
+
         mBinding.setPresenter(new Presenter());
-        mListAdapter = new EmployeeAdapter(this);
+
         mBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mBinding.recyclerView.setAdapter(mListAdapter);
-        mListAdapter.setListener(new EmployeeAdapter.OnItemClickListener() {
+        mEmployeeAdapter = new EmployeeAdapter(this);
+        mBinding.recyclerView.setAdapter(mEmployeeAdapter);
+        mEmployeeAdapter.setListener(new EmployeeAdapter.OnItemClickListener() {
             @Override
             public void onEmployeeClick(Employee employee) {
                 Toast.makeText(ListActivity.this,
@@ -61,8 +51,9 @@ public class ListActivity extends AppCompatActivity {
         });
         List<Employee> demoList = new ArrayList<>();
         demoList.add(new Employee("Zhai", "Mark", false));
-        demoList.add(new Employee("Ni", "Abner", false));
-        demoList.add(new Employee("Zeng", "Dim", true));
-        mListAdapter.addEmployees(demoList);
+        demoList.add(new Employee("Zhai2", "Mark2", false));
+        demoList.add(new Employee("Zhai3", "Mark3", true));
+        demoList.add(new Employee("Zhai4", "Mark4", false));
+        mEmployeeAdapter.addAll(demoList);
     }
 }

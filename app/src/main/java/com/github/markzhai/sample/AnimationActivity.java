@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.github.markzhai.sample.databinding.ActivityAnimationBinding;
 
-
 /**
  * @author markzhai on 16/7/7
  * @version 1.0.0
@@ -28,8 +27,8 @@ public class AnimationActivity extends AppCompatActivity {
         mBinding.addOnRebindCallback(new OnRebindCallback() {
             @Override
             public boolean onPreBind(ViewDataBinding binding) {
-                ViewGroup sceneRoot = (ViewGroup) binding.getRoot();
-                TransitionManager.beginDelayedTransition(sceneRoot);
+                ViewGroup view = (ViewGroup) binding.getRoot();
+                TransitionManager.beginDelayedTransition(view);
                 return true;
             }
         });
@@ -41,5 +40,4 @@ public class AnimationActivity extends AppCompatActivity {
             mBinding.setShowImage(isChecked);
         }
     }
-
 }

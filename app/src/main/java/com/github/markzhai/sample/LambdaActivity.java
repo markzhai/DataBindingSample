@@ -37,9 +37,8 @@ public class LambdaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this,
-                R.layout.activity_lambda);
-        mBinding.setEmployee(new Employee("Zhai", "Mark"));
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_lambda);
+        mBinding.setEmployee(new Employee("mark", "zhai"));
         mBinding.setPresenter(new Presenter());
     }
 }
