@@ -13,4 +13,9 @@ public class ProductionBindingAdapter extends MyBindingAdapter {
     public void setText(TextView view, String value) {
         TextViewBindingAdapter.setText(view, value);
     }
+
+    @Override
+    public void setTextColor(TextView view, int value) {
+        view.setTextColor(value);
+    }
 }

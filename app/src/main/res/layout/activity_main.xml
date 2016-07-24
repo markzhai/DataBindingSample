@@ -20,37 +20,49 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickSimpleDemo}"
-            android:text="@string/demo_simple"/>
+            android:text="@{@string/demo_simple}"
+            android:textColor="@{@color/textColorDay}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickListDemo}"
-            android:text="@string/demo_list"/>
+            android:text="@{@string/demo_list}"
+            android:textColor="@{@color/textColorDay}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickTwoWayDemo}"
-            android:text="@string/demo_inverse"/>
+            android:text="@{@string/demo_inverse}"
+            android:textColor="@{@color/textColorDay}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickLambdaDemo}"
-            android:text="@string/demo_lambda"/>
+            android:text="@{@string/demo_lambda}"
+            android:textColor="@{@color/textColorDay}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickExpressionDemo}"
-            android:text="@string/demo_expression"/>
+            android:text="@{@string/demo_expression}"
+            android:textColor="@{@color/textColorDay}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:onClick="@{presenter.onClickAnimationDemo}"
-            android:text="@string/demo_animation"/>
+            android:text="@{@string/demo_animation}"
+            android:textColor="@{@color/textColorDay}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="@{presenter.onClickInjectDemo}"
+            android:text="@string/change_component"/>
 
     </LinearLayout>
 

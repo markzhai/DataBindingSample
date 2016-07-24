@@ -12,4 +12,7 @@ public abstract class MyBindingAdapter {
     @BindingAdapter("android:text")
     public abstract void setText(TextView view, String value);
 
+
+    @BindingAdapter("android:textColor")
+    public abstract void setTextColor(TextView view, int color);
 }

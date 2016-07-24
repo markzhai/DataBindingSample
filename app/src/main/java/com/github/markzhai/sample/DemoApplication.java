@@ -10,6 +10,9 @@ import com.github.markzhai.sample.component.ProductionComponent;
  * @version 1.3.0
  */
 public class DemoApplication extends Application {
+
+    public static boolean isTest = false;
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -5,8 +5,10 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
+import com.github.markzhai.sample.component.ProductionComponent;
 import com.github.markzhai.sample.component.TestComponent;
 import com.github.markzhai.sample.databinding.ActivityMainBinding;
 
@@ -15,6 +17,8 @@ import com.github.markzhai.sample.databinding.ActivityMainBinding;
  * @version 1.0.0
  */
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding mBinding;
 
     public class Presenter {
         public void onClickSimpleDemo(View view) {
@@ -36,14 +40,20 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, LambdaActivity.class));
         }
         public void onClickInjectDemo(View view) {
-//            startActivity(new Intent(MainActivity.this, LambdaActivity.class));
+            if (DemoApplication.isTest) {
+                DataBindingUtil.setDefaultComponent(new ProductionComponent());
+            } else {
+                DataBindingUtil.setDefaultComponent(new TestComponent());
+            }
+            DemoApplication.isTest = !DemoApplication.isTest;
+            recreate();
         }
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setPresenter(new Presenter());
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        mBinding.setPresenter(new Presenter());
     }
 }

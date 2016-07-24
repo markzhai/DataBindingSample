@@ -34,4 +34,7 @@
 
     <string name="fire">Fire %s</string>
     <string name="employ">Employ %s</string>
+
+    <string name="change_component">Change Component</string>
+
 </resources>
